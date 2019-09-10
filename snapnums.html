@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>px</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <style type="text/css">
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-size: 17px;
+    }
+
+    section.cols-2.px {
+        display: flex;
+        height: 2000vh;
+
+    }
+
+
+    section.cols-2.px .col {
+        position: relative;
+        width: 50%;
+
+    }
+
+    section.cols-2.px .col .item {
+        width: 100%;
+        font-size: 15em;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace;
+        height: 70vh;
+    }
+
+    section.cols-2.px .col-left .item {
+        background-color: black;
+        margin-bottom: 55vh;
+        margin-top: 115vh;
+        position: sticky;
+        top: 15vh;
+        left: 0;
+
+    }
+
+    section.cols-2.px .col-right{
+    }
+    section.cols-2.px .col-right .item {
+        background-color: red;
+        margin-bottom: 30vh;
+        margin-top: 80vh;
+        top: 15vh;
+        left: 0;
+
+    }
+    section.cols-2.px .col-right .item:first-child {
+        margin-top: 250vh;
+
+    }
+
+    .box {
+        background: #ff8330;
+        will-change: transform;
+    }
+    .sticky{
+    	position: sticky;
+    	top:20%;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="cols-2 px">
+        <div class="col col-left">
+            <div class="item item-1 scroll-magic" data-scroll-speed="-332">a</div>
+            <div class="item item-2 scroll-magic" data-scroll-speed="-2">b</div>
+            <div class="item item-3 scroll-magic" data-scroll-speed="-2">c</div>
+            <div class="item item-3 scroll-magic" data-scroll-speed="-2">d</div>
+            <div class="item item-3 scroll-magic" data-scroll-speed="-2">e</div>
+            <div class="item item-3 scroll-magic" data-scroll-speed="-2">f</div>
+        </div>
+        <div class="col col-right">
+            <div class="item item-1 scroll-magic" data-scroll-speed="2">1</div>
+            <div class="item item-2 scroll-magic" data-scroll-speed="2">2</div>
+            <div class="item item-3 scroll-magic" data-scroll-speed="2">3</div>
+            <div class="item scroll-magic" data-scroll-speed="2">4</div>
+            <div class="item scroll-magic" data-scroll-speed="2">5</div>
+            <div class="item scroll-magic" data-scroll-speed="2">6</div>
+            <div class="item scroll-magic" data-scroll-speed="2">7</div>
+            <div class="item scroll-magic" data-scroll-speed="2">8</div>
+            <div class="item scroll-magic" data-scroll-speed="2">9</div>
+            <div class="item scroll-magic" data-scroll-speed="2">10</div>
+        </div>
+    </section>
+    <script>
+    document.addEventListener("DOMContentLoaded", attachScroll);
+
+    function attachScroll() {
+        var scrollerElms = document.querySelectorAll('.col-right .scroll-magic')
+        var margin = 0
+        var prePos = null
+        for (var i = 0, length1 = scrollerElms.length; i < length1; i++) {
+            var el = scrollerElms[i]
+            onScroll(el)
+        }
+
+        function onScroll(el) {
+            window.addEventListener("scroll", function() {
+                var rect = isInViewport(el)
+                if (rect) {
+                	var p = Math.round((rect.y/window.innerHeight) * 100)
+                    if(p < 30){
+                    	el.classList.add('sticky')
+                    	console.log(	"sticky")
+                    }
+                }
+            })
+        }
+        $.fn.moveIt = function() {
+            var $window = $(window);
+            var instances = [];
+
+            $(this).each(function() {
+                instances.push(new moveItItem($(this)));
+            });
+
+            window.addEventListener('scroll', function() {
+                var scrollTop = $window.scrollTop();
+                instances.forEach(function(inst) {
+                    inst.update(scrollTop);
+                });
+            }, { passive: true });
+        }
+
+        var moveItItem = function(el) {
+            this.el = $(el);
+            this.speed = parseInt(this.el.attr('data-scroll-speed'));
+        };
+
+        moveItItem.prototype.update = function(scrollTop) {
+            this.el.css('margin-top', '' + -(scrollTop / this.speed) + 'px');
+        };
+
+        // Initialization
+        $(function() {
+            $('[data-scroll-speed]').moveIt();
+        });
+
+    }
+
+    function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+        return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
+    }
+
+    function isInViewport(el) {
+
+        const rect = el.getBoundingClientRect()
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight)
+        const windowWidth = (window.innerWidth || document.documentElement.clientWidth)
+        const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0)
+        const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0)
+        if (vertInView && horInView) {
+            return rect
+        } else {
+            return false
+        }
+    };
+    </script>
+</body>
+
+</html>

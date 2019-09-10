@@ -1,0 +1,335 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>scroll test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap" rel="stylesheet">
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background: white;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .page {
+        height: 100%;
+        display: flex;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page2 {
+        height: 500%;
+        position: relative;
+    }
+
+    .carousel-scroll {
+        width: 100%;
+        height: 80vh;
+        overflow: visible;
+        position: sticky;
+        top: 10vh;
+        display: flex;
+    }
+
+    .carousel-scroll .track {
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: margin 1s ease;
+    }
+
+    .carousel-scroll .item {
+        width: 100%;
+        height: 100%;
+        background-image: url(https://dummyimage.com/1920x1080/a32/000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+
+    .carousel-scroll .item-2 {
+        background-image: url(https://dummyimage.com/1920x1080/111/765);
+    }
+
+    .carousel-scroll .item-3 {
+        background-image: url(https://dummyimage.com/1920x1080/bbb/fff);
+    }
+
+    .btn-group {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        cursor: pointer;
+        width: 40px;
+        height: 100px;
+        background: transparent;
+        z-index: 2;
+    }
+    .btn-left{
+        border-top:1px solid white;
+        border-right:1px solid white;
+    }
+    .btn-right{
+        border-top:1px solid white;
+        border-left:1px solid white;
+    }
+
+    .btn:hover {
+        border-color:#000;
+    }
+
+    .btn:active {
+        background: #999;
+    }
+
+    .text-widget {
+        position: sticky;
+        top: 0px;
+        left: 40px;
+        min-width:300px;
+        width:40%;
+        z-index: 1100;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#fff;
+        display: none;
+    }
+
+    .carousel-scroll .text-widget {
+        color: #000;
+    }
+
+    .item .active {
+        color: #fff;
+    }
+
+    .floater {
+        background-image: url(https://dummyimage.com/1920x1080/bce/000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: #fff;
+        width: 100%;
+        height: 55vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        transition: all .25 s;
+        font-size: 4em;
+        display: flex;
+        flex-direction: flex-end;
+        align-items: flex-end;
+    }
+
+    .floater-1 {
+        background-image: url(https://dummyimage.com/1920x1080/a43/000);
+    }
+
+    .floater-2 {
+        background-image: url(https://dummyimage.com/1920x1080/ggg/000);
+    }
+
+    .fixed {
+        position: fixed;
+        margin-top: 30px;
+        transition: margin 1s ease;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 10%;
+        transition: margin 1s ease;
+    }
+
+    .panels {
+        background-color: #eee;
+    }
+
+    .dummy-image-red {
+        background-image: url(https://dummyimage.com/1920x1080/ggg/8d0000);
+
+    }
+
+    .dummy-image-black {
+        background-image: url(https://dummyimage.com/1920x1080/000/ffe);
+
+    }
+
+    .dummy-image-blue {
+        background-image: url(https://dummyimage.com/1920x1080/1978f7/fff) !important;
+
+    }
+    </style>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="logo"><img src="https://assets.website-files.com/5d03c03e30118383cf62f0d5/5d03c03e301183703f62f0da_Drako_Horizontal.svg" width="140" alt="Drako Logo" class="image"></div>
+    <div class="page">
+        <h3 class="">Scroll page test</h3>
+    </div>
+    <div class="page2">
+        <div class="carousel-scroll">
+            <div class="track">
+                    <div class="text-widget">
+                        <h3>Not ipsum dolor sit
+                        </h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                <div class="item">
+                </div>
+                <div class="item-2 item">
+                </div>
+                <div class="item item-3">
+                </div>
+            </div>
+            <div class="btn-group">
+                <div class="btn-left btn"></div>
+                <div class="btn-right btn"></div>
+            </div>
+        </div>
+        <div class="floater"></div>
+    </div>
+    <div class="page">drako motors</div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var carouselS = document.querySelector('.carousel-scroll')
+        var textElms = carouselS.querySelectorAll('.item .text-widget')
+        var track = carouselS.querySelector('.track')
+        var frame = 0
+        var margin = 0
+        var position = 0
+        var prevPos = 0
+        var interval = null
+        var lBtn = carouselS.querySelector('.btn-left')
+        var rBtn = carouselS.querySelector('.btn-right')
+        lBtn.onclick = lClick
+        rBtn.onclick = rClick
+        addScrollMagic(carouselS)
+
+        function lClick() {
+            if (frame === 0) {
+                track.style.marginLeft = 0
+                textElms[frame].classList.add('active')
+                return true
+            }
+            frame = frame - 1
+            margin = (frame * 100) * -1
+            position = margin
+            track.style.marginLeft = margin + '%'
+            textElms[frame].classList.add('active')
+        }
+
+        function rClick() {
+            if (frame === 2) {
+                track.style.marginLeft = '0'
+                frame = 0
+                textElms[frame].classList.add('active')
+                return true;
+            }
+            frame = frame + 1
+            margin = (frame * 100) * -1
+            track.style.marginLeft = margin + '%'
+            textElms[frame].classList.add('active')
+        }
+
+        function addScrollMagic(carousel) {
+            var track = carousel.querySelector('.track')
+            var pageElm = carousel.parentElement
+            var floaterElm = carousel.parentElement.querySelector('.floater')
+            window.addEventListener("scroll", runOnScroll)
+
+            function runOnScroll() {
+                var wintop = Math.round(window.pageYOffset || document.documentElement.scrollTop)
+                var rect = isInViewport(carousel)
+                var floaterRect = isInViewport(floaterElm)
+                console.log( prevPos, wintop)
+                if ((floaterRect.top < 150) && !floaterElm.classList.contains('sticky') && prevPos < wintop) {
+                    console.log("stick")
+                    floaterElm.classList.add('sticky')
+                }
+                if ((prevPos < wintop || floaterRect.top > 150) && floaterElm.classList.contains('sticky')) {
+                    console.log("rem")
+                    floaterElm.classList.remove('sticky')
+
+                }
+                if (rect) {
+                    var pageRect = isInViewport(pageElm)
+                    if (pageRect.top > 100) {
+                        sum = 0
+                    } else {
+                        var sum = scaleBetween(wintop, 0, 200, 0, pageRect.width) * -1
+                        sum = Math.max(sum, -200)
+                        sum = Math.min(sum, 0)
+                        sum = Math.round(sum / 25) * 25
+
+                    }
+                    track.style.marginLeft = sum + '%'
+                    if (Math.abs(sum) > 150) {
+                        frame = 2
+                    }
+                    if (Math.abs(sum) > 90 && Math.abs(sum) < 150) {
+                        frame = 1
+                    }
+                    if (Math.abs(sum) < 90) {
+                        frame = 0
+                    }
+                    for (var i = 0, length1 = textElms.length; i < length1; i++) {
+                        var t = textElms[i]
+                        t.classList.remove('active')
+                    }
+                    var txtElm = textElms[frame]
+                    txtElm.classList.add('active')
+                }
+                prevPos = wintop
+            }
+        }
+
+    });
+
+    function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+        return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
+    }
+
+    function isInViewport(el) {
+
+        const rect = el.getBoundingClientRect()
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight)
+        const windowWidth = (window.innerWidth || document.documentElement.clientWidth)
+        const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0)
+        const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0)
+        if (vertInView && horInView) {
+            return rect
+        } else {
+            return false
+        }
+    };
+    </script>
+</body>
+
+</html>

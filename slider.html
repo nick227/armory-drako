@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>scroll test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap" rel="stylesheet">
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background: white;
+        padding: 0;
+        margin: 0;
+        font-size:15px;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .page {
+        height: 100%;
+        display: flex;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page2 {
+        height: 300%;
+    }
+
+    .carousel-scroll {
+        width: 100%;
+        height: 55vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-scroll .track {
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: margin 1.3s ease;
+    }
+
+    .carousel-scroll .item {
+        width: 100%;
+        height: 100%;
+        background-image: url(https://dummyimage.com/1920x1080/a32/000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+
+    .carousel-scroll .item-2 {
+        background-image: url(https://dummyimage.com/1920x1080/111/765);
+    }
+
+    .carousel-mouseover {
+        width: 75%;
+        height: 55vh;
+        overflow: hidden;
+        position: sticky;
+        top:0;
+    }
+
+    .carousel-mouseover .track {
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: margin 1.3s ease;
+    }
+
+    .carousel-mouseover .item {
+        width: 100%;
+        height: 100%;
+        background-image: url(https://dummyimage.com/1920x1080/a32/000);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+
+    .carousel-mouseover .item-2 {
+        background-image: url(https://dummyimage.com/1920x1080/111/765);
+    }
+
+    .btn-group {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        background: red;
+        z-index: 2;
+    }
+
+    .btn:hover {
+        background: #888;
+    }
+
+    .btn:active {
+        background: #999;
+    }
+
+    .btn-left {}
+
+    .btn-right {}
+
+    .text-widget {
+        font-size: 5em;
+        position: absolute;
+        top: 20px;
+        left: 60px;
+
+
+    }
+    .item .text-widget {
+      color:#fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page"></div>
+    <div class="page2">
+        <div class="carousel-scroll">
+            <div class="track">
+                <div class="item">
+                    <div class="text-widget">Oh hi there</div>
+                </div>
+                <div class="item-2 item"><div class="text-widget">I'm Buzz Aldridge</div></div>
+                <div class="item"><div class="text-widget">Join me</div></div>
+            </div>
+            <div class="btn-group">
+                <div class="btn-left btn"></div>
+                <div class="btn-right btn"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var carouselS = document.querySelector('.carousel-scroll')
+        var carouselM = document.querySelector('.carousel-scroll')
+        var track = carouselS.querySelector('.track')
+        var frame = 0
+        var margin = 0
+        var position = 0
+        var lBtn = carouselS.querySelector('.btn-left')
+        var rBtn = carouselS.querySelector('.btn-right')
+        lBtn.onclick = lClick
+        rBtn.onclick = rClick
+        addScrollMagic(carouselS)
+
+        function lClick() {
+            if (frame === 0) { 
+            track.style.marginLeft = 0
+            return true 
+          }
+            frame = frame - 1
+            margin = (frame * 100) * -1
+            position = margin
+            track.style.marginLeft = margin + '%'
+        }
+
+        function rClick() {
+            if (frame === 2) { 
+            track.style.marginLeft = '0'
+            frame=0
+            return true
+             }
+            frame = frame + 1
+            margin = (frame * 100) * -1
+            position = margin
+            track.style.marginLeft = margin + '%'
+        }
+
+        function addWheelMagic(carousel) {
+            track.addEventListener("mouseover", runOnOver);
+            track.addEventListener("mouseout", runOnOut);
+            runOnOver()
+            function runOnOver() {
+                console.log("on")
+                window.addEventListener("wheel", runOnWheel)
+            }
+
+            function runOnOut() {
+                console.log("off")
+                window.removeEventListener("wheel", runOnWheel)
+            }
+
+            function runOnWheel(e) {
+                var delta = e.wheelDelta ? e.wheelDelta : -e.detail
+                trackRect = isInViewport(track)
+                position = Math.round(position + delta / 10)
+                position = Math.min(position, 0)
+                position = Math.max(position, -200)
+                position = Math.round(position / 10) * 10
+                track.style.marginLeft = position + '%'
+                if (position > 100) {
+                    frame = 1
+                }
+                if (position > 150) {
+                    frame = 2
+                }
+
+            }
+
+        }
+
+        function addScrollMagic(carousel) {
+            console.log(carousel)
+            var track = carousel.querySelector('.track')
+            var pageElm = carousel.parentElement
+            window.addEventListener("scroll", runOnScroll);
+
+            function runOnScroll() {
+                var rect = isInViewport(carousel)
+                if (rect) {
+                    var pageRect = isInViewport(pageElm)
+                    var wintop = Math.round(window.pageYOffset || document.documentElement.scrollTop)
+                    var sum = scaleBetween(wintop, 0, 200, 0, pageRect.height) * -1
+                    sum = Math.max(sum, -200)
+                    sum = Math.min(sum, 0)
+                    track.style.marginLeft = sum + '%'
+                } else {
+                    track.style.marginLeft = '0'
+
+                }
+            }
+
+        }
+
+    });
+
+    function scaleBetween(unscaledNum, minAllowed, maxAllowed, min, max) {
+        return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed;
+    }
+
+    function isInViewport(el) {
+
+        const rect = el.getBoundingClientRect()
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight)
+        const windowWidth = (window.innerWidth || document.documentElement.clientWidth)
+        const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0)
+        const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0)
+        if (vertInView && horInView) {
+            return rect
+        } else {
+            return false
+        }
+    };
+    </script>
+</body>
+
+</html>

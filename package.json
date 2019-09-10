@@ -1,0 +1,24 @@
+{
+  "name": "drako",
+  "version": "1.0.0",
+  "description": "",
+  "main": "configurator.js",
+  "dependencies": {
+    "google-closure-linter": "^1.2.0",
+    "jshint": "^2.10.2",
+    "jshint-loader": "^0.8.4"
+  },
+  "devDependencies": {
+    "closure-webpack-plugin": "^2.0.1",
+    "google-closure-compiler": "^20190729.0.0",
+    "install": "^0.13.0",
+    "webpack": "^4.39.2",
+    "webpack-closure-compiler": "^2.1.6",
+    "webpack-jshint-loader": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nrios",
+  "license": "ISC"
+}

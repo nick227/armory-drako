@@ -314,7 +314,12 @@ animation-fill-mode:both;
     position: absolute;
     z-index: 0;
 }
-
+.div-block-2atech.wide_tech_section{
+    padding: 2% 2% 2% !important;
+}
+.div-block-2atech.wide_tech_section .paragraph-2{
+    font-size: 0.92em !important;
+}
 #technology .fp-slidesContainer{
     overflow-y: hidden;
 }

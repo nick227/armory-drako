@@ -1,5 +1,4 @@
 (function() {
-
     var specs_data = {
         gte: {
             right: [{ title: "AC Charging", text: "15 kW with onboard charger" },
@@ -402,6 +401,19 @@
         trackLink.onclick = handleClick
 
     }
+    function updateTechSection(){
+         var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+         var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+         if(w/h > 1.65 && h < 850 && w > 991 ){
+            console.log("d")
+         console.log(w/h)
+         console.log(w,h)
+            var secs = document.querySelectorAll('.technology_section')
+            for(var i = 0, length1 = secs.length; i < length1; i++){
+                secs[i].classList.add('wide_tech_section')
+            }
+         } 
+    }
 
 
     function isStaging() {
@@ -412,6 +424,8 @@
         setupWebForm()
         //setupNav()
         if (location.pathname === '/') {
+            updateTechSection()
+            addEventListener('resize', updateTechSection)
             setupSpecifications()
             setupModal()
             setupSplashPage()
@@ -427,6 +441,7 @@
 
     function getFullPageVars() {
         var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
         var vars = {
             fixedElements: '.navbar, .footer',
             setAllowScrolling: true,
@@ -471,6 +486,7 @@
         if (location.pathname === '/company') {
             document.querySelector('#letter').classList.add('fp-auto-height')
             document.querySelector('#leadership').classList.add('fp-auto-height')
+            document.querySelector('.design2').classList.add('fp-auto-height')
             vars.normalScrollElements = "#leadership, #letter, #news, #contact, .footer, #email-form, .div-block-28"
         }
         //STAGING

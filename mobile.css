@@ -47,6 +47,10 @@
 
 
 @media (max-width: 991px) {
+    .design.page.fullpage.page-snap.page-100.fp-section.fp-table{
+        min-height:460px;
+        height:auto !important;
+    }
     .design2 .row .copy.flex-col {
         justify-content: flex-start;
     }

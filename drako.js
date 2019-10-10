@@ -497,7 +497,7 @@
 
         }
         //HOME DESKTOP
-        if (w > 990 && !isStaging() && location.pathname !== '/company') {
+        if (w > 990 && !isStaging() && location.pathname === '/') {
             var rows = document.querySelectorAll('.row')
             var row = document.querySelector('.row')
             for (var i = rows.length - 1; i >= 0; i--) {
@@ -520,13 +520,16 @@
             vars.normalScrollElements = "#contact, .footer"
         }
         //MOBILE
-        if (w < 991 && location.pathname !== '/company') {
+        if (w < 991 && location.pathname === '/') {
                 document.querySelector('#design').setAttribute('data-percentage', 80)
             vars.scrollingSpeed = 400
             vars.normalScrollElements = ".design2, #specs, #technology, .footer, #email-form, .div-block-28"
             vars.lazyLoading = false
             vars.scrollHorizontally = false
             vars.controlArrows = false
+        }
+        //MOBILE2
+        if(w < 600 && location.pathname === '/') {
         }
         return vars
     }

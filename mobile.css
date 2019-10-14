@@ -151,7 +151,9 @@
 }
 
 @media (min-width: 580px) {
-
+.paragraph-2.technology{
+    font-size:19px;
+}
     .body-2 #contact .div-block-27 {
         min-width: 480px;
     }
@@ -219,7 +221,7 @@
     .slide .techsliderimage2{
         background-position: 50% 50%;
         background-size: 100%;
-        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d7c19be5b749362c0a3db1a_GTE_torque_vectoring_web_Rev7.jpg);
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d9f81d1f70f351803847163_5d7c19be5b749362c0a3db1a_GTE_torque_vectoring_web_Rev7-mobile.jpg);
     }
 
     #hometop.splash.page-snap {

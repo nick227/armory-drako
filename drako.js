@@ -403,9 +403,6 @@
          var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
          var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
          if(w/h > 1.65 && h < 850 && w > 991 ){
-            console.log("d")
-         console.log(w/h)
-         console.log(w,h)
             var secs = document.querySelectorAll('.technology_section')
             for(var i = 0, length1 = secs.length; i < length1; i++){
                 secs[i].classList.add('wide_tech_section')
@@ -548,8 +545,6 @@
 
         function showBtn(e) {
             if (!btnOn && e.target !== btn && !e.target.classList.contains('image-24')) {
-                console.log("3")
-                console.log(nav.style.transform)
                 btn.style.opacity = 1
                 btnOn = true
             }

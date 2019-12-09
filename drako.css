@@ -6,6 +6,9 @@ p,
     font-family: 'Titillium Web';
 }
 
+body{
+background-color:#101820;
+}
 #contact h1 {
     color: #000;
 }
@@ -780,4 +783,10 @@ transition-duration: 1100ms !important;
 }
  .nav-link-secondary{
     color:#fee;
+ }
+ .div-block-30{
+    z-index: 99999;
+ }
+ #hometop-id{
+    opacity:0;
  }

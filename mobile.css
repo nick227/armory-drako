@@ -151,9 +151,6 @@
 }
 
 @media (min-width: 580px) {
-.paragraph-2.technology{
-    font-size:19px;
-}
     .body-2 #contact .div-block-27 {
         min-width: 480px;
     }
@@ -162,6 +159,9 @@
 @media (max-width: 480px) {
     #contact .div-block-28 {
         height: 100%;
+    }
+    .background-video-2 {
+    height: 42vh;
     }
 
     #technology h1.heading-1.subsection {

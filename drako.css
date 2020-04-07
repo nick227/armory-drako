@@ -1,64 +1,67 @@
-html,
-body,
+.specs-nav,
 a,
-p,
-.specs-nav {
-    font-family: 'Titillium Web';
+body,
+html,
+p {
+    font-family: 'Titillium Web'
 }
 
-body{
-background-color:#101820;
-}
-#contact h1 {
-    color: #000;
+body {
+    background-color: #101820;
+    overflow-x: hidden!important
 }
 
-/** specifications **/
+#contact-id h1 {
+    color: #000
+}
+
 .specs-nav {
     white-space: nowrap;
-    display: flex;
+    display: flex
 }
 
 .specs-link-track {
-    transition: all 0.5s ease;
+    transition: all .5s ease
 }
 
-.custom-container.contact{
-    overflow:visible !important;
+.custom-container.contact {
+    overflow: visible!important
 }
+
 .fp-tableCell {
-    vertical-align: top !important;
+    vertical-align: top!important
 }
 
-/** design section **/
-.design2 .row .fader-image.wid-67 .mask{
-    width:100%
+.design2 .row .fader-image.wid-67 .mask {
+    width: 100%
 }
-.row{
-    width:100%;
-    display:flex
-}
-.row .fp-tableCell{
-    padding-top: 80px !important;
-    margin-bottom: 4% !important;
+
+.row {
     width: 100%;
-    display: flex;
+    display: flex
 }
-#design{
-    margin-bottom:4%;
+
+.row .fp-tableCell {
+    padding-top: 80px!important;
+    margin-bottom: 4%!important;
+    width: 100%;
+    display: flex
 }
-#luxury{
-    margin-top:4%;
+
+#design-id {
+    margin-bottom: 4%
 }
-.design2{
-    height: auto !important;
+
+#luxury-id {
+    margin-top: 4%
+}
+
+.design2 {
+    height: auto!important
 }
 
 .design2.fp-section.fp-table>.fp-tableCell {
-    height: auto !important;
-}
-
-.design2 .row.last {
+    height: auto!important
 }
 
 .design2 .row .fp-tableCell .copy.flex-col.wid-33.hei-400.scroll-fx {
@@ -66,147 +69,142 @@ background-color:#101820;
     height: auto;
     top: 0;
     display: flex;
-    margin: 0;
-
+    margin: 0
 }
 
 .design2 .row .fp-tableCell .copy.flex-col.wid-33.hei-400.scroll-fx .inner {
-    max-width: 400px;
+    max-width: 400px
 }
 
 .design2 .row .fp-tableCell .fader-image.wid-67 {
-    width: 63%;
+    width: 63%
 }
 
 .design2 .row .fp-tableCell .fader-image.wid-67 img {
-    width: 100%;
+    width: 100%
 }
 
 .design2 .row.last .fp-tableCell .fader-image.wid-67 {
     margin-left: 0;
-    margin-right: 4%;
-
+    margin-right: 4%
 }
 
 .design2 .row.last .fp-tableCell .fader-image.wid-67 img {
-    width: 100%;
+    width: 100%
 }
 
 .design2 .row .fp-tableCell .fader-image.wid-67 .mask {
-    width: 100%;
+    width: 100%
 }
 
-#contact {
+#contact-id {
     min-height: 100vh;
-    z-index: 1;
+    z-index: 1
 }
-.spec-div-image,
-.spec-div-block-text {
+
+.spec-div-block-text,
+.spec-div-image {
     padding-top: 0;
-    height: 100vh;
+    height: 100vh
 }
 
-/*****/
-
-#performance-video,
+#performance-id .html-embed,
+#performance-video-id,
 .background-video,
-.background-video video,
-#performance .html-embed {
-    display: block !important;
+.background-video video {
+    display: block!important
 }
 
-#performance {
-    display: flex;
-
+#performance-id {
+    display: flex
 }
 
-#performance video {
+#performance-id video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .wrapper {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .hidden {
-    display: none !important;
+    display: none !important
 }
 
-/** SPECS SECTION **/
-
-
-#hometop{
+#hometop-id {
     opacity: 0;
 }
-.heading-3.tagline{
-    line-height:32px;
-    top:0;
-    position: relative;
+
+.heading-3.tagline {
+    line-height: 32px;
+    top: 0;
+    position: relative
 }
 
 .specs-link-gte.active,
 .specs-link-track.active {
-    transition: all 0.5s ease;
-    color: #d50032;
+    transition: all .5s ease;
+    color: #d50032
 }
 
 .spec-div-block-text {
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .div-block-gte {
-    transition: all 0.5s ease;
-    -webkit-animation-name:fadeInUp;
-    animation-name:fadeInUp;
-    -webkit-animation-duration:1s;
-    animation-duration:1s;
-    -webkit-animation-fill-mode:both;
-    animation-fill-mode:both;
+    transition: all .5s ease;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
 }
 
 .home_tagline {
--webkit-animation-name:slideInLeftCustom;
-animation-name:slideInLeftCustom;
-animation-delay:.6s;
--webkit-animation-delay:.6s;
--webkit-animation-duration:1s;
-animation-duration:1s;
--webkit-animation-fill-mode:both;
-animation-fill-mode:both;
+    -webkit-animation-name: slideInLeftCustom;
+    animation-name: slideInLeftCustom;
+    animation-delay: .6s;
+    -webkit-animation-delay: .6s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
 }
 
-.div-block-specs,
 .div-block-gte,
+.div-block-specs,
 .home_tagline {
-    display:none;
+    display: none
 }
+
 .spec-hp {
     animation-delay: 4.5s;
     -webkit-animation-name: slideInLeftCustom;
-    animation-name: slideInLeftCustom;
+    animation-name: slideInLeftCustom
 }
 
 .spec-mph {
     animation-delay: 4.7s;
     -webkit-animation-name: slideInLeftCustom;
-    animation-name: slideInLeftCustom;
+    animation-name: slideInLeftCustom
 }
 
 .spec-passenger {
     animation-delay: 4.9s;
     -webkit-animation-name: slideInLeftCustom;
-    animation-name: slideInLeftCustom;
+    animation-name: slideInLeftCustom
 }
 
 .spec-divider {
-    -webkit-animation-duration: 3s !important;
-    animation-duration: 3s !important;
+    -webkit-animation-duration: 3s!important;
+    animation-duration: 3s!important;
     animation-delay: 5s;
     -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+    animation-name: fadeIn
 }
 
 @-webkit-keyframes slideInLeftCustom {
@@ -214,17 +212,15 @@ animation-fill-mode:both;
         opacity: 0;
         -webkit-transform: translate3d(-75px, 0, 0);
         transform: translate3d(-75px, 0, 0);
-        visibility: visible;
+        visibility: visible
     }
-
     20% {
-        opacity: 0;
+        opacity: 0
     }
-
     to {
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
     }
 }
 
@@ -233,136 +229,126 @@ animation-fill-mode:both;
         opacity: 0;
         -webkit-transform: translate3d(-75px, 0, 0);
         transform: translate3d(-75px, 0, 0);
-        visibility: visible;
+        visibility: visible
     }
-
     20% {
-        opacity: 0;
+        opacity: 0
     }
-
     to {
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
     }
 }
 
 .slideInLeftCustom {
     -webkit-animation-name: slideInLeftCustom;
-    animation-name: slideInLeftCustom;
+    animation-name: slideInLeftCustom
 }
 
 .scroll-fx {
-    transition: all 1.2s ease;
-}
-
-/************/
-.w-slider-arrow-left, .w-slider-arrow-right {
+    transition: all 1.2s ease
 }
 
 .fp-controlArrow.fp-prev {
     top: 0;
-    width: 17px !important;
-    height: 100% !important;
-    border: 0 !important;
-    border-width: 0 0 0 0 !important;
-    background-image: url(https://assets.website-files.com/5d56dbf4cf8afa58e963837e/5d56dbf4cf8afa03106383de_Asset%201.svg);
+    width: 17px!important;
+    height: 100%!important;
+    border: 0!important;
+    border-width: 0!important;
+    background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d4dfb5bc1a7e49cce5c5cf0_Asset%201.svg);
     background-repeat: no-repeat;
-    background-position: center center;
-
-
+    background-position: center center
 }
-
-.w-slider-arrow-right {}
 
 .fp-controlArrow.fp-next {
     top: 0;
-    width: 17px !important;
-    height: 100% !important;
-    border: 0 !important;
-    border-width: 0 0 0 0 !important;
-    background-image: url(https://assets.website-files.com/5d56dbf4cf8afa58e963837e/5d56dbf4cf8afa26686383df_Asset%203.svg);
+    width: 17px!important;
+    height: 100%!important;
+    border: 0!important;
+    border-width: 0!important;
+    background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d4dfb875c89807130ca3d85_Asset%203.svg);
     background-repeat: no-repeat;
-    background-position: center center;
-
+    background-position: center center
 }
 
 .fp-slidesNav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span {
-    width: 18px !important;
-    height: 12px !important;
-    border-radius: 15px !important;
-    margin: -2px 0 0 -2px !important;
+    width: 18px!important;
+    height: 12px!important;
+    border-radius: 15px!important;
+    margin: -2px 0 0 -2px!important;
     background-color: transparent;
-    border: 1px solid #111;
+    border: 1px solid #111
 }
 
 .fp-slidesNav ul li a span {
-    width: 18px !important;
-    height: 12px !important;
-    border-radius: 15px !important;
-    margin: -2px 0 0 -2px !important;
-
+    width: 18px!important;
+    height: 12px!important;
+    border-radius: 15px!important;
+    margin: -2px 0 0 -2px!important
 }
 
 .fp-slidesNav.fp-bottom {
     text-align: center;
-    bottom: 2px;
+    bottom: 2px
 }
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: #111;
+    background: #111
 }
 
-#luxury {
+#luxury-id {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh
 }
 
-#luxury .fp-tableCell {
+#luxury-id .fp-tableCell {
     position: absolute;
-    z-index: 0;
-}
-.div-block-2atech.wide_tech_section{
-    padding: 1% 2% 2% !important;
-}
-.div-block-2atech.wide_tech_section .paragraph-2{
-    font-size: 1em !important;
-}
-#technology .fp-slidesContainer{
-    overflow-y: hidden;
+    z-index: 0
 }
 
-#technology>.fp-tableCell {
-    top: 0;
+.div-block-2atech.wide_tech_section {
+    padding: 1% 2% 2%!important
+}
+
+.div-block-2atech.wide_tech_section .paragraph-2 {
+    font-size: 1em!important
+}
+
+#technology-id .fp-slidesContainer {
+    overflow-y: hidden
+}
+
+#technology-id>.fp-tableCell {
+    top: 0
 }
 
 .heading-4.subsection {
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .slider h2 {
-    white-space: nowrap;
+    white-space: nowrap
 }
-
 
 .slider.w-slider {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100vh
 }
 
 .slider .w-slider-mask {
     top: 0;
-    left: 0;
+    left: 0
 }
 
 .slider .w-slide {
-    transition: transform 500ms ease 0s;
+    transition: transform .5s ease 0s
 }
 
 .w-slider-arrow-left {
@@ -370,7 +356,7 @@ animation-fill-mode:both;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 20;
+    z-index: 20
 }
 
 .w-slider-arrow-right {
@@ -378,25 +364,21 @@ animation-fill-mode:both;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 20;
+    z-index: 20
 }
 
-/** CUSTOM STYLES **/
 a.w-webflow-badge {
-    display: none !important;
+    display: none!important
 }
 
 .link-b {
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
-
-/*** CONTACT FORM ***/
-
-#contact,
-#contact .fp-tableCell {
-    vertical-align: top;
+#contact-id,
+#contact-id .fp-tableCell {
+    vertical-align: top
 }
 
 .close-btn {
@@ -405,246 +387,224 @@ a.w-webflow-badge {
     position: absolute;
     right: 20px;
     top: 16px;
-    background-image: url("https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d56079900f0152f58509d08_Asset%204.svg");
+    background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d56079900f0152f58509d08_Asset%204.svg);
     cursor: pointer;
-    border: 0 !important;
-    outline: none !important;
-}
-*[data-aos="fade-right-new"] {
-  opacity: 0;
-  transform: translate3d(-10px, 0, 0);
-  transition-property: transform, opacity;
-transition-duration: 1100ms !important;
-
-  &.aos-animate {
-    opacity: 1;
-  transform: translate3d(0, 0, 0);
-  }
+    border: 0!important;
+    outline: 0!important
 }
 
-/*************** ARMORY BASE **************/
-
-.hidden {
-    display: none;
+[data-aos=fade-right-new] {
+    opacity: 0;
+    transform: translate3d(-10px, 0, 0);
+    transition-property: transform, opacity;
+    transition-duration: 1.1s!important;
+    transform: translate3d(0, 0, 0)
 }
 
 .page-snap {
-    -webkit-backface-visibility:hidden; -webkit-transform: translateZ(0);
-
-
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .page {
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: relative
 }
 
 .overflow-x-none {
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .page-100 {
-    min-height: 100vh;
-
+    min-height: 100vh
 }
 
 .page-150 {
-    min-height: 150vh;
-
+    min-height: 150vh
 }
 
 .page-50 {
-    min-height: 50vh;
-
+    min-height: 50vh
 }
 
 .page-200 {
-    min-height: 200vh;
-
+    min-height: 200vh
 }
 
 .page-250 {
-    min-height: 250vh;
-
+    min-height: 250vh
 }
 
 .page-300 {
-    min-height: 300vh;
-
+    min-height: 300vh
 }
 
 .page-600 {
-    min-height: 600vh;
-
+    min-height: 600vh
 }
 
 .top-left {
     top: 7%;
-    left: 7%;
+    left: 7%
 }
 
 .bottom-left {
     bottom: 4%;
-    left: 4%;
+    left: 4%
 }
 
 .bottom-left-2 {
     bottom: 1%;
     left: 1%;
-    border-top: 2px solid red;
-
+    border-top: 2px solid red
 }
 
 .flex-col.bottom-left-2 .inner {
     width: 95%;
-    padding: 10px 10px 35px 10px;
+    padding: 10px 10px 35px 10px
 }
 
 .bg-white {
     background-color: #fff;
     color: #333;
     border-top: 2px solid #ccc;
-    padding-top: 10px !important;
+    padding-top: 10px!important
 }
 
 .bg-block {
-    background-color: #111;
+    background-color: #111
 }
 
 .font-white {
-    color: #fff;
+    color: #fff
 }
 
 .h-panel {
     background-color: #fff;
-    color: #333;
+    color: #333
 }
-
 
 .wid-10 {
     width: 10%;
-    position: relative;
+    position: relative
 }
 
 .wid-25 {
     width: 25%;
-    position: relative;
+    position: relative
 }
 
 .wid-33 {
     width: 33%;
-    position: relative;
+    position: relative
 }
 
 .wid-50 {
     width: 50%;
-    position: relative;
+    position: relative
 }
 
 .wid-67 {
     width: 67%;
-    position: relative;
+    position: relative
 }
 
 .wid-70 {
     width: 70%;
-    position: relative;
+    position: relative
 }
 
 .wid-75 {
     width: 75%;
-    position: relative;
+    position: relative
 }
 
 .wid-90 {
     width: 90%;
-    position: relative;
+    position: relative
 }
 
 .wid-100 {
     width: 100%;
-    position: relative;
+    position: relative
 }
 
 .hei-70 {
-    height: 70vh;
+    height: 70vh
 }
 
 .hei-full {
-    height: 100%;
+    height: 100%
 }
 
 .hei-100 {
-    height: 100px;
+    height: 100px
 }
 
 .hei-200 {
-    height: 200px;
+    height: 200px
 }
 
 .hei-300 {
-    height: 300px;
+    height: 300px
 }
 
 .hei-400 {
-    height: 400px;
+    height: 400px
 }
 
 .hei-570 {
     height: 570px;
-    min-height: 570px;
+    min-height: 570px
 }
 
 .hei-674 {
-    height: 733px;
+    height: 733px
 }
 
 .hei-733 {
-    height: 733px;
+    height: 733px
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .flex-col .inner {
     max-width: 380px;
-    padding: 0 25px;
+    padding: 0 25px
 }
 
-.flex-col .inner h2 {}
-
 .flex-col .inner.smaller {
-    width: 350px;
+    width: 350px
 }
 
 .flex-start {
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .flex-left {
-    align-items: flex-start;
+    align-items: flex-start
 }
 
-/************ FADER IMAGE *********************/
 .fader-image {
     position: relative;
     overflow: hidden;
     height: 100%;
-    z-index: 0;
+    z-index: 0
 }
 
 .fader-image img {
     width: 100%;
     position: absolute;
     z-index: 0;
-    left: 0 !important;
+    left: 0!important;
 }
 
 .fader-image .mask {
@@ -652,30 +612,26 @@ transition-duration: 1100ms !important;
     width: 100%;
     height: 100%;
     z-index: 2;
-    position: absolute;
+    position: absolute
 }
 
 .fader-image.fader-white .mask {
-    background-color: rgba(255, 255, 255);
-
+    background-color: rgba(255, 255, 255)
 }
 
 .fader-image.fader-red .mask {
-    background-color: rgba(255, 0, 1);
-
+    background-color: rgba(255, 0, 1)
 }
 
 .fader-image.fader-beige .mask {
-    background-color: beige;
-
+    background-color: beige
 }
-/*********************************/
 
 #configurator {
     display: none;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh
 }
 
 .config_image {
@@ -689,13 +645,13 @@ transition-duration: 1100ms !important;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .config_image img {
     width: 100%;
     height: auto;
-    position: absolute;
+    position: absolute
 }
 
 .div_config {
@@ -704,9 +660,8 @@ transition-duration: 1100ms !important;
     height: 125px;
     bottom: 0;
     background-color: transparent;
-    z-index: 1;
+    z-index: 1
 }
-
 
 .chip {
     transition: all 1.5s ease;
@@ -715,35 +670,97 @@ transition-duration: 1100ms !important;
     width: 45px;
     height: 27px;
     margin-right: 15px;
-    border: 0px solid #000;
-    border-radius: 16px;
+    border: 0 solid #000;
+    border-radius: 16px
 }
 
 .border-1 {
-    border: 1px solid #000;
+    border: 1px solid #000
 }
 
 .arrow {
     cursor: pointer;
-    z-index: 50;
+    z-index: 50
 }
 
 .faded {
-    opacity: 0.45 !important;
-    transition: opacity 2s ease;
+    opacity: .45!important;
+    transition: opacity 2s ease
 }
 
 .active {
     opacity: 1;
-    position: relative;
+    position: relative
 }
 
-/*********************************/
 .bg-static {
-    background-attachment: fixed;
+    background-attachment: fixed
+}
+.drako-lightbox.w-lightbox{
+    position: relative;
+    z-index: 0;
+}
+.drako-lightbox.w-lightbox .slide-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 1;
+}
+.drako-lightbox.w-inline-block.w-lightbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slide-2.w-slide, .main-img{
+    opacity: 1 !important;
+}
+.slide-content{
+    margin-top: -5px;
 }
 
-/** CUSTOM MODAL **/
+[data-aos^=hide][data-aos^=hide] {
+    opacity: 1;
+    transition-property: opacity, transform
+}
+.brand.w-nav-brand{
+    z-index: 999999;
+}
+[data-aos^=hide][data-aos^=hide].aos-animate {
+    opacity: 0;
+    transform: translate(0)
+}
+.w-lightbox-backdrop{
+    z-index: 99999999 !important;
+    transition: opacity 2s ease !important;
+}
+.w-lightbox-close{
+    background-image:url('https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5e7fd8595836dbea23ba2dfb_wclose_btn.png') !important;
+}
+.w-lightbox-frame figure{
+    transition: all .5s ease;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+
+}
+.w-lightbox-spinner{
+    display: none;
+}
+.main-img{
+    transition: all 1s ease;
+}
+.main-img:hover{
+    opacity: 1 !important;
+
+}
 .modal-container {
     width: 100%;
     top: 28%;
@@ -753,7 +770,7 @@ transition-duration: 1100ms !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .custom-modal {
@@ -763,30 +780,23 @@ transition-duration: 1100ms !important;
     padding: 55px;
     max-width: 100%;
     text-align: center;
-    position: relative;
+    position: relative
 }
-
-/** COMPANY PAGE **/
 
 .body-2 .contact>.div-block-31 {
     text-align: center;
-    min-width: 500px;
+    min-width: 500px
 }
-/*
-.nav-menu{
-    background-color: rgba(0,0,0,0.9) !important;
-}
-*/
-.nav-link-5, .nav-link-4{
-    color:#fff;
 
+.nav-link-4,
+.nav-link-5 {
+    color: #fff
 }
- .nav-link-secondary{
-    color:#fee;
- }
- .div-block-30{
-    z-index: 99999;
- }
- #hometop-id{
-    opacity:0;
- }
+
+.nav-link-secondary {
+    color: #fee
+}
+
+.div-block-30 {
+    z-index: 99999
+}

@@ -361,6 +361,7 @@
             img = row.querySelector("img")
             if ($(window).width() > 991) {
                 resizeImg(img, row)
+
             } else {
                 resizeImg(img, wrapper)
             }
@@ -428,11 +429,11 @@
     function afterRender() {
         setupWebForm()
         fixLinks()
-        if (location.pathname === '/') {
+        setupModal()
+        if (location.pathname === '/' || location.pathname === '/dev.html') {
             updateTechSection()
             addEventListener('resize', updateTechSection)
             setupSpecifications()
-            setupModal()
             setupSplashPage()
             setupDesignPage()
             setupFader()
@@ -441,6 +442,18 @@
                 offset: 0
             })
         }
+    }
+
+    function updateDesign2() {
+        var rows = document.querySelectorAll('.row')
+        for (var i = rows.length - 1; i >= 0; i--) {
+            var row = rows[i]
+            row.classList.add('page-snap')
+            row.setAttribute('data-percentage', 80)
+            row.setAttribute('id', 'misc' + i)
+        };
+        $('.row').unwrap()
+
     }
 
     function getFullPageVars(idList) {
@@ -458,6 +471,7 @@
             slidesNavigation: false,
             controlArrows: true,
             lockAnchors: true,
+            //anchors:idList,
             scrollOverflowReset: true,
             scrollingSpeed: 1000,
             showActiveTooltip: true,
@@ -482,6 +496,7 @@
             licenseKey: "09AF1CAC-5DF84B75-9A1F7925-8B133F00"
         }
         vars.afterResize = function() {
+
             AOS.refresh()
             if (location.pathname === '/') {
                 setupDesignPage()
@@ -498,18 +513,31 @@
         }
         //STAGING
         if (isStaging()) {
+            setTimeout(function() {
+                var link = document.querySelector('a[href="http://alvarotrigo.com/fullPage/extensions/"]')
+                if(link){
+                var elm = link.parentNode
+                //elm.parentNode.removeChild(elm)
+                link.setAttribute('style', 'display:none !important;')
+                elm.setAttribute('style', 'display:none !important;')
+
+                }
+
+            }, 4444)
+
             //vars.navigation = false
             //vars.scrollHorizontally = false
             //vars.controlArrows = false
 
         }
-        //HOME DESKTOP
+        //DESKTOP
         if (w > 990 && location.pathname === '/') {
+            //updateDesign2()
             vars.lazyLoading = true
             vars.loopHorizontal = false
             vars.scrollHorizontally = true
-            document.querySelector('.w-slider-arrow-right').classList.add('hidden')
-            document.querySelector('.w-slider-arrow-left').classList.add('hidden')
+            document.querySelector('.right-arrow.w-slider-arrow-right').classList.add('hidden')
+            document.querySelector('.left-arrow.w-slider-arrow-left').classList.add('hidden')
         }
         if (w > 990 && location.pathname !== '/company') {
             vars.normalScrollElements = "#contact-id, .footer"
@@ -518,7 +546,7 @@
         if (w < 991 && location.pathname === '/') {
             document.querySelector('#design-id').setAttribute('data-percentage', 80)
             vars.scrollingSpeed = 400
-            vars.normalScrollElements = ".design2, #specs, #technology, .footer, #email-form, .div-block-28"
+            vars.normalScrollElements = ".design2, #specs, #technology, .footer, #email-form, .div-block-28, .spec-div-block-text"
             vars.lazyLoading = false
             vars.scrollHorizontally = false
             vars.controlArrows = false
@@ -526,40 +554,47 @@
         return vars
     }
 
-    function updateLink() {
+    function scrollSite(e) {
         var elm = this
-        var id = elm.getAttribute('href').replace('#', '')
-        fullpage_api.moveTo(id)
+        var link = elm.getAttribute('href')
+        if (link.indexOf('http') !== 0) {
+            e.preventDefault()
+            var id = link.replace('#', '')
+            fullpage_api.moveTo(id)
+
+        }
     }
 
     function fixLinks() {
         var links = document.querySelectorAll('.nav-menu a, .div-block-arrow a')
         for (var i = links.length - 1; i >= 0; i--) {
             var link = links[i]
-            link.onclick = updateLink
+            link.onclick = scrollSite
         }
 
     }
 
     function setupPageSnap() {
-        removeCopyright()
-        var rows = document.querySelectorAll('.row')
-        for (var i = rows.length - 1; i >= 0; i--) {
-            var row = rows[i]
-            row.classList.add('page-snap')
-            row.setAttribute('data-percentage', 80)
-        };
-        $('.row').unwrap()
-
         var idList = []
-        $(".page-snap").each(function(i, e) {
+
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+        if (w > 990 && location.pathname === '/') {
+            updateDesign2()
+        }
+        var elms = document.querySelectorAll('.page-snap')
+        for (var i = 0, length1 = elms.length; i < length1; i++) {
+            updateAttributes(elms[i])
+        }
+
+        function updateAttributes(e) {
             var id = e.getAttribute('id')
             idList.push(id)
             e.setAttribute('id', id + '-id')
             e.setAttribute('data-anchor', id)
-        })
+
+        }
         $(".page-snap").wrapAll("<div id='wrapper' />")
-        $("#wrapper").fullpage(getFullPageVars(idList))
+            $("#wrapper").fullpage(getFullPageVars(idList))
         $("video").each(function() {
             $(this).attr("data-keepplaying", true)
         });
@@ -567,17 +602,4 @@
     document.addEventListener("DOMContentLoaded", function() {
         $(document).ready(setupPageSnap)
     });
-
-    function removeCopyright() {
-        if (isStaging()) {
-            setTimeout(function() {
-                var elm = document.querySelector('a[href="http://alvarotrigo.com/fullPage/extensions/"]').parentElement
-                if (elm) {
-                    elm.setAttribute('style', '')
-                    elm.style.display = 'none'
-                    elm.style.background = 'transparent'
-                }
-            }, 1550)
-        }
-    }
 })()

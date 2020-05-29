@@ -150,7 +150,7 @@
     }
 
 }
-@media (max-width:480px) {
+@media screen and (max-width:480px) {
     #video-carousel-section-id .div-video-header{
         position: relative !important;
         margin-top: auto !important;
@@ -225,7 +225,7 @@
         background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d9f81d1f70f351803847163_5d7c19be5b749362c0a3db1a_GTE_torque_vectoring_web_Rev7-mobile.jpg)
     }
     #hometop-id.splash.page-snap {
-        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d55d7d300f015499c4fc680_Drako_new_home6.jpg)
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5eced582c552aaff80682432_190821AM02_1446--mobile3.jpg)
     }
     #contact-id {
         min-height: 100vh;
@@ -235,3 +235,81 @@
         background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5d57214bc88cbc0f327907ad_Drako_company_mobile.jpg)
     }
 }
+@media screen and (width: 375px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5ecea4a4cece3b900e4bbb70/5ecf2e3e0e918eac5d9d9fc1_190821AM02_1446%3Dnew-mobile-7.jpg) !important
+
+    }
+ }
+@media screen and (width: 360px) and (height:640px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecf39ceb314baf3f38850bc_190821AM02_1446--360x640-oo.jpg) !important
+        
+    }
+ }
+@media screen and (width: 360px) and (height:740px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecf39d0fe2db919bd327233_190821AM02_1446--360x740-oo.jpg) !important
+        
+    }
+ }
+@media screen and (max-width: 411px) and (height:823px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecf39ce0e918e8a8b9dce60_190821AM02_1446--411x823-oo.jpg) !important
+        
+    }
+ }
+@media screen and (max-width: 411px) and (height:731px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecffac7917a694fccbac132_190821AM02_411x731-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 1440px) and (height:3040px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe4458ce752af8207e3fe_190821AM02_1440x3040-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 1080px) and (height:2180px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe4449d8fbe4d46e2b746_190821AM02_1080x2180-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 375px) and (height:812px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe760b314bab6328c8bbe_190821AM02_375x812-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 320px) and (height:568px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe9a7ecf1c51ee8b46250_190821AM02_320x568-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 980px) and (height:1702px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfee8925d6024016fbce81_190821AM02_980x1702-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 414px) and (height:896px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecff0f59540ca19edf6a3a8_190821AM02_414x896-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 414px) and (height:736px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecff5c5c601032d50c4e188_190821AM02_414x736-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 414px) and (height:719px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ed0020f851e75782869b775_190821AM02_1446--414x719-o.jpg) !important
+        
+    }
+ }

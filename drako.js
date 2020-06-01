@@ -493,7 +493,7 @@
 
                 }
             },
-            licenseKey: "09AF1CAC-5DF84B75-9A1F7925-8B133F00"
+            licenseKey: "********************************"
         }
         vars.afterResize = function() {
 

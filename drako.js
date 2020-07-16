@@ -202,7 +202,12 @@
         formContainer.classList.add("hidden")
         formContainer.classList.add("animated")
         links.classList.add("animated")
-
+        var hlink = document.querySelector('a.header-contact')
+        hlink.onclick = function(){
+            fullpage_api.setScrollingSpeed(3300)
+            fullpage_api.moveTo('contact')
+            fullpage_api.setScrollingSpeed(1000)
+        }
         function showForm(e) {
             form.scrollTop = 0
             var type = e.target.getAttribute("data-type")
@@ -493,7 +498,7 @@
 
                 }
             },
-            licenseKey: "********************************"
+            licenseKey: "09AF1CAC-5DF84B75-9A1F7925-8B133F00"
         }
         vars.afterResize = function() {
 

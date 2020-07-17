@@ -159,7 +159,6 @@
     .link-3.header-contact .text-span{
         font-size: 15px;
     }
-
     .link-block-4{
         margin-top: 10px !important;
         margin-left: 245px !important;
@@ -289,6 +288,12 @@
         
     }
  }
+@media screen and (max-width: 411px) and (height:731px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecffac7917a694fccbac132_190821AM02_411x731-o.jpg) !important
+        
+    }
+ }
 @media screen and (width: 1440px) and (height:3040px) {
     #hometop-id.splash.page-snap {
         background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe4458ce752af8207e3fe_190821AM02_1440x3040-o.jpg) !important
@@ -298,6 +303,12 @@
 @media screen and (width: 1080px) and (height:2180px) {
     #hometop-id.splash.page-snap {
         background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe4449d8fbe4d46e2b746_190821AM02_1080x2180-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 375px) and (height:812px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecfe760b314bab6328c8bbe_190821AM02_375x812-o.jpg) !important
         
     }
  }
@@ -322,6 +333,18 @@
 @media screen and (width: 414px) and (height:736px) {
     #hometop-id.splash.page-snap {
         background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ecff5c5c601032d50c4e188_190821AM02_414x736-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 414px) and (height:719px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ed0020f851e75782869b775_190821AM02_1446--414x719-o.jpg) !important
+        
+    }
+ }
+@media screen and (width: 360px) and (height:617px) {
+    #hometop-id.splash.page-snap {
+        background-image: url(https://uploads-ssl.webflow.com/5d42433702c7536df3627046/5ee1cd2eb01b8919e20e2b35_190821AM02_1446--360x617.jpg)
         
     }
  }
